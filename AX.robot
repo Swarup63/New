@@ -2,7 +2,7 @@
 Test Setup        Connect To Database Using Custom Params    cx_Oracle    '${DBUSERNAME}/${DBPASSWORD}@${DBSID}.world'
 Test Teardown     Run Keywords    Web Teardown
 ...               AND    Run Keyword And Ignore Error    Disconnect From Database
-Resource          ../../../keywords/common/Common.txt
+Resource         ../../../keywords/common/Common.txt
 Resource          ../../../keywords/webClient/Commom.txt
 Resource          ../../../keywords/webClient/AX/Debtors_and_Creditors.txt
 Resource          ../../../keywords/webClient/AX/Transactions.txt
