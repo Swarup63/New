@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
               retry(3) {
-                sh './Jenkinsfile.sh
+                sh './Jenkinsfile.sh'
               }
                 
             }
