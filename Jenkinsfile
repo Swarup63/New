@@ -3,9 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              retry(3) {
-                sh './Jenkinsfile.sh'
-              }
+                parallel(first: {
+                  robot -t Test1 Suite1.txt
+                },second: {
+                    robot -t Test1 Suite1.txt
+                })
+              //retry(3) {
+                //sh './Jenkinsfile.sh'
+              //}
                 
             }
         }
